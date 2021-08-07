@@ -5,7 +5,16 @@
   "repository": "https://github.com/aanchal-av/calculator-automation.git",
   "author": "Aanchal",
   "license": "MIT",
+  "scripts": {
+    "cypress": "node_modules/.bin/cypress open"
+  },
   "dependencies": {
     "cypress": "^8.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.2.0"
   }
 }
