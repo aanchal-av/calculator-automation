@@ -1,8 +1,9 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import { baseUrl } from "../../../cypress.json";
+import calculatorPage from "../../support/pageObejct/calculatorPage";
 
 Given(/^I launch the calculator application$/, () => {
-  cy.visit(baseUrl);
+  calculatorPage.launchApplication();
 });
 
 Then(
