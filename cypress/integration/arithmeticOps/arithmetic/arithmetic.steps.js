@@ -1,7 +1,14 @@
 import { When, Then } from "cypress-cucumber-preprocessor/steps";
 
+When(/^I perform "([^\"]*)" operation$/, (arithemticOps) => {
+  cy.get(".component-button.orange")
+    .should("be.visible")
+    .contains(arithemticOps)
+    .click();
+});
+
 When(
-  /^I perform "([^\"]*)" operation with two "([^\"]*)" and "([^\"]*)" positive numbers$/,
+  /^I perform "([^\"]*)" operation on two "([^\"]*)" and "([^\"]*)" positive numbers$/,
   (arithemticOps, firstNumber, secondNumber) => {
     firstNumber.split("").forEach((individualNumber) => {
       cy.get(".component-button")
@@ -24,7 +31,7 @@ When(
 );
 
 When(
-  /^I perform "([^\"]*)" operation with two "([^\"]*)" and "([^\"]*)" negative numbers$/,
+  /^I perform "([^\"]*)" operation on two "([^\"]*)" and "([^\"]*)" negative numbers$/,
   (arithemticOps, firstNumber, secondNumber) => {
     firstNumber.split("").forEach((individualNumber) => {
       cy.get(".component-button")
@@ -48,7 +55,7 @@ When(
 );
 
 When(
-  /^I perform "([^\"]*)" operation with one positive "([^\"]*)" and one negative "([^\"]*)" number$/,
+  /^I perform "([^\"]*)" operation on one positive "([^\"]*)" and one negative "([^\"]*)" number$/,
   (arithemticOps, firstNumber, secondNumber) => {
     firstNumber.split("").forEach((individualNumber) => {
       cy.get(".component-button")
