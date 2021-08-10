@@ -6,7 +6,8 @@
   "author": "Aanchal",
   "license": "MIT",
   "scripts": {
-    "cypress": "node_modules/.bin/cypress open"
+    "cypress:open": "node_modules/.bin/cypress open",
+    "cypress:run": "node_modules/.bin/cypress run"
   },
   "dependencies": {
     "cypress": "^8.2.0",
