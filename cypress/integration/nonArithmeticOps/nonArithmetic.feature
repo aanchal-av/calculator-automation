@@ -4,7 +4,6 @@ Feature: As a user I should be able to perform all the non arithmetic operations
         Given I launch the calculator application
         And I should see "0" in the display
 
-
     Scenario: I should be able to clear the numbers in the display
         And I enter "7" positive number
         When I click "AC" button
